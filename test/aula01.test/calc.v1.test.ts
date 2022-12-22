@@ -1,4 +1,4 @@
-import { calc } from "../src/calc.v1";
+import { calc } from "../../src/aula01/calc.v1";
 
 test("Deve calcular uma corrida em hórario normal", function(){
     const fare = calc([{ dist: 10, ds: new Date("2021-03-10T10:00:00") }]);
