@@ -16,8 +16,8 @@ function isSunday(date: Date) {
 export function calculateRide (segments: { distance: number; date: Date; }[]) {
     let fare = 0;
     for (const segment of segments) {
-        if(!segment.distance || typeof segment.distance !== "number" || segment.distance < 0) return -1;
-        if(!segment.date || !(segment.date instanceof Date) || segment.date.toString() === "Invalid Date") return -2;
+        if(!segment.distance || typeof segment.distance !== "number" || segment.distance < 0) throw new Error("Invalid Distance");
+        if(!segment.date || !(segment.date instanceof Date) || segment.date.toString() === "Invalid Date") throw new Error("Invalid Date");
         if(isOvernight(segment.date) && !isSunday(segment.date)) {
            fare += segment.distance * OVERNIGTH_FARE;
         }

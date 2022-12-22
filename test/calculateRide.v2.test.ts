@@ -21,13 +21,11 @@ test("Deve calcular uma corrida em hórario no domingo noturno", function(){
 });
 
 test("Não deve calcular uma corrida com distância invalida", function(){
-    const fare = calculateRide([{ distance: -10, date: new Date("2021-03-07T22:00:00") }]);
-    expect(fare).toBe(-1);
+   expect(() => calculateRide([{ distance: -10, date: new Date("2021-03-07T22:00:00") }])).toThrow(new Error("Invalid Distance"));
 });
 
 test("Não deve calcular uma corrida com data invalida", function(){
-    const fare = calculateRide([{ distance: 10, date: new Date("javascript") }]);
-    expect(fare).toBe(-2);
+    expect( () => calculateRide([{ distance: 10, date: new Date("javascript") }])).toThrow(new Error("Invalid Date"));
 });
 
 test("Deve calcular uma corrida em hórario normal com valor minimo", function(){
