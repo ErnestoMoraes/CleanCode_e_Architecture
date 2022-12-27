@@ -1,5 +1,4 @@
-import { calculateRideV3 } from "../../../src/aula01/v3/claculateRide.v3";
-import Ride from "../../../src/aula01/v3/Ride";
+import Ride from "../../../src/aula02/Ride";
 
 test("Deve calcular uma corrida em hórario normal", function(){
     const ride = new Ride();
