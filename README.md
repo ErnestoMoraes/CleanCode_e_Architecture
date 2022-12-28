@@ -25,3 +25,11 @@
  - Design x Artquitetura.
  - Reconhecer e Indentificar Code Smells
  - Design Patterns: Strategy, Factory e Chain of Responsability
+
+
+### Como rodar os testes automatizados:
+
+```
+npx jest --coverage
+npx jest --watchAll
+```
