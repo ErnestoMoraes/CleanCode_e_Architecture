@@ -24,7 +24,8 @@
  - O que é OO?
  - Design x Artquitetura.
  - Reconhecer e Indentificar Code Smells
- - Design Patterns: Strategy, Factory e Chain of Responsability
+ - Design Patterns: Strategy, Factory e Chain of Responsability.
+ - O que é um teste automatizado?
 
 
 ### Como rodar os testes automatizados:
