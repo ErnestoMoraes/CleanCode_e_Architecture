@@ -1,8 +1,8 @@
 import FareCalculator from "./FareCalculate";
 import Segment from "./Segment";
 
-export default class SundayFareCalculator implements FareCalculator {
-    FARE = 2.90;
+export default class OvernigthSundayFareCalculatore implements FareCalculator {
+    FARE = 5;
     next?: FareCalculator;
 
     constructor(next?: FareCalculator){
@@ -10,7 +10,7 @@ export default class SundayFareCalculator implements FareCalculator {
     }
 
     calculate(segment: Segment): number {
-        if(!segment.isOvernight() && segment.isSunday()) {
+        if(segment.isOvernight() && segment.isSunday()) {
             return segment.distance * this.FARE;
         }
         if(!this.next) throw new Error("");
