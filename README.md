@@ -26,7 +26,7 @@
  - Reconhecer e Indentificar Code Smells
  - Design Patterns: Strategy, Factory e Chain of Responsability.
  - O que é um teste automatizado?
-
+ - 3 leis do TDD.
 
 ### Como rodar os testes automatizados:
 
@@ -34,3 +34,7 @@
 npx jest --coverage
 npx jest --watchAll
 ```
+
+### 1° Projeto de Atividade: Validação de CPF
+Os testes cobrem 93.33% do código.
+
