@@ -20,16 +20,6 @@ test("Deve tentar validar o cpf com mais de 14 caracteres", function(){
     expect(isValid).toBeFalsy();
 });
 
-test("Deve tentar validar o cpf undefined", function(){
-    const isValid = validate(undefined);
-    expect(isValid).toBeFalsy();
-});
-
-test("Deve tentar validar o cpf null", function(){
-    const isValid = validate(null);
-    expect(isValid).toBeFalsy();
-});
-
 test("Deve validar o cpf com todos os digitos iguais", function(){
     const isValid = validate('111.111.111-11');
     expect(isValid).toBeFalsy();
