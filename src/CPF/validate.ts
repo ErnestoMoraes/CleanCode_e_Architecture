@@ -1,5 +1,6 @@
 function hasAllDigitsEqual(cpf: string) {
-    return cpf.split('').every(c => c === cpf[0]);
+    const [firstDigit] = cpf;
+    return cpf.split('').every(digit => digit === firstDigit);
 }
 
 function cleanCpf(cpf: string) {
@@ -11,7 +12,7 @@ function isValidLength(cpf: string) {
 }
 
 function extractDigit(cpf: string) {
-    return cpf.substring(cpf.length - 2, cpf.length);
+    return cpf.slice(9);
 }
 
 function calculateDigit(cpf: string, factor: number) {
@@ -28,9 +29,9 @@ export function validate (cpf: string) {
     cpf = cleanCpf(cpf);
     if(!isValidLength(cpf)) return false;
     if(hasAllDigitsEqual(cpf)) return false;
-    const dg1 = calculateDigit(cpf, 10);
-    const dg2 = calculateDigit(cpf, 11);
+    const digit1 = calculateDigit(cpf, 10);
+    const digit2 = calculateDigit(cpf, 11);
     const checkDigit = extractDigit(cpf);
-    const calculatedDigit = `${dg1}${dg2}`;
+    const calculatedDigit = `${digit1}${digit2}`;
     return checkDigit == calculatedDigit;
 }
