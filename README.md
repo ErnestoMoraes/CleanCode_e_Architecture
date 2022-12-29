@@ -38,3 +38,11 @@ npx jest --watchAll
 ### 1° Projeto de Atividade: Validação de CPF
 Os testes cobrem 93.33% do código.
 
+### Comando para iniciar um projeto TS:
+```
+yarn init -y
+yarn add typescript jest ts-node ts-jest nodemon
+npx tsc --init
+npx ts-jest config:init
+```
+ - criar pasta "src" e "test".
