@@ -46,3 +46,6 @@ npx tsc --init
 npx ts-jest config:init
 ```
  - criar pasta "src" e "test".
+
+ ### Rodar SQL
+ 
