@@ -2,7 +2,8 @@ import Purchase from "./Purchase";
 import PurchaseRepository from "./PurchaseRepository";
 import pgp from "pg-promise";
 
-
+// driven (outbound)
+// access ao banco de dados
 export default class PurchaseRepositoryDatabase implements PurchaseRepository {
     async getPurchases(card_number: string, month: number, year: number): Promise<Purchase[]> {
         const connection = pgp()('postgres://postgres:123456@localhost:5432/app');
