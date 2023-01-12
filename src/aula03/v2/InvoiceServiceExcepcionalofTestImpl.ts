@@ -1,16 +1,10 @@
 
-import { CurrencyGatewayHttp } from "./CurrencyGatewayHttp";
 import InvoiceService from "./InvoiceService";
+import { CurrencyGatewayHttp } from "./CurrencyGatewayHttp";
 import PurchaseRepositoryDatabase from "./PurchaseRepositoryDatabase";
 
-export default class InvoiceServiceImpl implements InvoiceService {
-    purchaseRepository: PurchaseRepositoryDatabase;
-    currencyGateway: CurrencyGatewayHttp;
-
-    constructor(){
-        this.purchaseRepository = new PurchaseRepositoryDatabase(); 
-        this.currencyGateway = new CurrencyGatewayHttp();
-    }
+export default class InvoiceServiceExcepcionalofTestImpl implements InvoiceService {
+    constructor(readonly currencyGateway: CurrencyGatewayHttp, readonly purchaseRepository: PurchaseRepositoryDatabase){ }
 
     async calculate(card_number: string, month: number, year: number): Promise<number> {
         const purchases = await this.purchaseRepository.getPurchases(card_number, month, year);
