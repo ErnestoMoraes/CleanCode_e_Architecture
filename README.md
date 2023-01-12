@@ -47,5 +47,11 @@ npx ts-jest config:init
 ```
  - criar pasta "src" e "test".
 
+ ## Aula 03
  ### Rodar SQL
+
+ ### Rodar Expressa
+ npx ts-node src/aula03/main.ts
+ Executando o Express de forma aitva: (Direto)
+ npx nodemon src/aula03/main.ts
  
