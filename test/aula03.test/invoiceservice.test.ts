@@ -4,7 +4,7 @@ import PurchaseRepositoryDatabase from "../../src/aula03/v2/PurchaseRepositoryDa
 import Purchase from "../../src/aula03/v2/Purchase";
 import InvoiceServiceImpl from "../../src/aula03/v2/InvoiceServiceImpl";
 
-test('Deve testar o calculo da fatura', async function(){
+test('Deve testar o calculo da fatura usando STUB', async function(){
     const currencyGatewayHttpStub = sinon.stub(CurrencyGatewayHttp.prototype, 'getCurrency').returns(Promise.resolve(3));
     const purchaseRepositoryDatabaseSub = sinon.stub(PurchaseRepositoryDatabase.prototype, 'getPurchases').returns(Promise.resolve([new Purchase('123412341324', 100, 'USD')])); 
     const invoiceService = new InvoiceServiceImpl();
@@ -12,4 +12,13 @@ test('Deve testar o calculo da fatura', async function(){
     expect(total).toBe(300);
     currencyGatewayHttpStub.restore();
     purchaseRepositoryDatabaseSub.restore();
+    sinon.restore();
+});
+
+test('Deve testar o calculo da fatura usando SPY', async function(){
+    const spy = sinon.spy(PurchaseRepositoryDatabase.prototype, 'getPurchases');
+    const invoiceService = new InvoiceServiceImpl();
+    const total = await invoiceService.calculate('123412341234', 9, 2023);
+    expect(total).toBe(690);
+    expect(spy.calledWith('123412341324', 9, 2023)).toBe(true);
 });
