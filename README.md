@@ -50,6 +50,7 @@ npx ts-jest config:init
  ## Aula 03
  ### Rodar SQL
  - Verificar a tulização do PSQL
+ - Instalação e Debugação
 
  ### Rodar o Express
  - ```npx ts-node src/aula03/main.ts```
