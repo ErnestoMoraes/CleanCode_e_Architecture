@@ -49,10 +49,10 @@ npx ts-jest config:init
 
  ## Aula 03
  ### Rodar SQL
-  - Verificar a tulização do PSQL
+ - Verificar a tulização do PSQL
 
- ### Rodar Expressa
- npx ts-node src/aula03/main.ts
- Executando o Express de forma aitva: (Direto)
- npx nodemon src/aula03/main.ts
+ ### Rodar o Express
+ - npx ts-node src/aula03/main.ts
+ - Executando o Express de forma aitva: (Direto)
+ - npx nodemon src/aula03/main.ts
  
