@@ -48,7 +48,7 @@ npx ts-jest config:init
  - criar pasta "src" e "test".
 
  ## Aula 03
- - [ ] Porta and Adapters
+ - [ ] Porta and Adapters / Hexagonal
  - [ ] Tests Patterns
 
  ### Rodar SQL
