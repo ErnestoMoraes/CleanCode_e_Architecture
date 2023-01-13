@@ -48,6 +48,8 @@ npx ts-jest config:init
  - criar pasta "src" e "test".
 
  ## Aula 03
+ - [ ] Tests Patterns
+ - [ ] 
  ### Rodar SQL
  - Verificar a tulização do PSQL
  - Instalação e Debugação
