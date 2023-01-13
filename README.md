@@ -57,4 +57,9 @@ npx ts-jest config:init
  - ```npx nodemon src/aula03/main.ts```
  
  ### Teste Feitos
+ - Dummy
+ - Stub
+ - Mock
+ - Spy
+ - Fake
  
