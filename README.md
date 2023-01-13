@@ -52,7 +52,9 @@ npx ts-jest config:init
  - Verificar a tulização do PSQL
 
  ### Rodar o Express
- - npx ts-node src/aula03/main.ts
+ - ```npx ts-node src/aula03/main.ts```
  - Executando o Express de forma aitva: (Direto)
- - npx nodemon src/aula03/main.ts
+ - ```npx nodemon src/aula03/main.ts```
+ 
+ ### Teste Feitos
  
