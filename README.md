@@ -49,6 +49,7 @@ npx ts-jest config:init
 
  ## Aula 03
  ### Rodar SQL
+  - Verificar a tulização do PSQL
 
  ### Rodar Expressa
  npx ts-node src/aula03/main.ts
