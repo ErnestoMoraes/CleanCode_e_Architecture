@@ -69,5 +69,3 @@ npx ts-jest config:init
  
 Atualização
 Atualização
-Atualização
-Atualização
