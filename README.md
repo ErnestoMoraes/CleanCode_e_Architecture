@@ -66,6 +66,3 @@ npx ts-jest config:init
  - Mock
  - Spy
  - Fake
- 
-Atualização
-Atualização
